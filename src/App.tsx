@@ -1,15 +1,10 @@
-import SplineScene from './components/SplineScene'
-import Title from './components/Title'
+import HeroSection from './components/HeroSection'
 
 function App() {
-
   return (
-    <>
-      <div className="flex">
-        <Title/>
-        <SplineScene/>
-      </div>
-    </>
+    <div className="selection:bg-indigo-200">
+        <HeroSection/>
+    </div>
   )
 }
 
