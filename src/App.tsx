@@ -1,8 +1,12 @@
+import HeroSection from "./components/HeroSection"
+import Menu from "./components/Menu"
 
 
 function App() {
   return (
-    <div>
+    <div className="">
+      <Menu/>
+      <HeroSection/>
     </div>
   )
 }
