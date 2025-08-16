@@ -15,10 +15,10 @@ export default function App() {
   };
 
   return (
-    <div className="font-inter text-black bg-white">
+    <div className="font-inter text-black bg-white cursor-default">
       {/* nav bar */}
       <nav className="fixed top-0 left-0 w-full bg-white">
-        <ul className="flex justify-center gap-4 sm:gap-6 md:gap-8 py-4 text-zinc-400">
+        <ul className="flex justify-center gap-4 sm:gap-10 md:gap-14 py-4 pt-6 text-gray-500 text-[clamp(0.6rem,_5vw,_1rem)]">
           <li>
             <button onClick={() => scrollToSection(homeRef)}>Home</button>
           </li>
@@ -35,7 +35,7 @@ export default function App() {
       </nav>
 
       {/* home */}
-      <section ref={homeRef} className="h-screen flex items-center justify-center p-5">
+      <section ref={homeRef} className="h-screen flex items-center justify-center p-5 pt-15">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function App() {
           className="max-w-4xl px-4"
         >
           <h1 className="text-[clamp(1.8rem,_6vw,_3rem)] font-inter">
-            Hello, I'm <span className="italic font-bodoni">Catherine Weeks</span>, a software engineer with a passion for front-end design.
+            Hello, I'm <span className="italic font-bodoni">Catherine Weeks</span>, a software engineer with a passion for responsive and clean <span className=" italic font-bodoni">front-end design</span>.
           </h1>
 
           {/* clickable icons */}
@@ -68,7 +68,7 @@ export default function App() {
           {/* view my work */}
           <button
             onClick={() => scrollToSection(projectsRef)}
-            className="mt-14 px-6 py-3 bg-black text-[clamp(0.8rem,_3vw,_1.2rem)] text-white rounded-xl flex items-center gap-2 hover:-translate-y-1"
+            className="mt-14 px-6 py-3 bg-black text-[clamp(0.8rem,_3vw,_1.2rem)] text-white rounded-xl flex items-center gap-2 hover:-translate-y-1 cursor-pointer"
           >
             View my work →
           </button>
