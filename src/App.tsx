@@ -15,10 +15,10 @@ export default function App() {
   };
 
   return (
-    <div className="font-sans text-black bg-white">
+    <div className="font-inter text-black bg-white">
       {/* nav bar */}
-      <nav className="fixed top-0 left-0 w-full bg-white z-50">
-        <ul className="flex justify-center gap-8 py-4 text-zinc-400">
+      <nav className="fixed top-0 left-0 w-full bg-white">
+        <ul className="flex justify-center gap-4 sm:gap-6 md:gap-8 py-4 text-zinc-400">
           <li>
             <button onClick={() => scrollToSection(homeRef)}>Home</button>
           </li>
@@ -35,16 +35,15 @@ export default function App() {
       </nav>
 
       {/* home */}
-      <section ref={homeRef} className="h-screen flex items-center justify-center">
+      <section ref={homeRef} className="h-screen flex items-center justify-center p-5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-2xl px-4"
+          transition={{ duration: 1.0 }}
+          className="max-w-4xl px-4"
         >
-          <h1 className="text-3xl md:text-5xl font-light">
-            Hello, I'm <span className="italic font-serif">Catherine Weeks</span>, a software engineer,
-            front-end developer and design enthusiast.
+          <h1 className="text-[clamp(1.8rem,_6vw,_3rem)] font-inter">
+            Hello, I'm <span className="italic font-bodoni">Catherine Weeks</span>, a software engineer with a passion for front-end design.
           </h1>
 
           {/* clickable icons */}
@@ -54,7 +53,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="w-6 h-6"/>
+              <FaGithub className="w-8 h-8"/>
             </a>
 
             <a
@@ -62,14 +61,14 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="w-6 h-6"/>
+              <FaLinkedin className="w-8 h-8"/>
             </a>
           </div>
 
           {/* view my work */}
           <button
             onClick={() => scrollToSection(projectsRef)}
-            className="mt-8 px-6 py-3 bg-black text-white rounded-lg flex items-center gap-2 hover:bg-gray-800 transition"
+            className="mt-14 px-6 py-3 bg-black text-[clamp(0.8rem,_3vw,_1.2rem)] text-white rounded-xl flex items-center gap-2 hover:-translate-y-1"
           >
             View my work →
           </button>
