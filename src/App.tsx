@@ -18,7 +18,7 @@ export default function App() {
     <div className="font-inter text-black bg-white cursor-default">
       {/* nav bar */}
       <nav className="fixed top-0 left-0 w-full bg-white">
-        <ul className="flex justify-center gap-4 sm:gap-10 md:gap-14 py-4 pt-6 text-gray-500 text-[clamp(0.6rem,_5vw,_1rem)]">
+        <ul className="flex justify-center gap-4 sm:gap-10 md:gap-14 py-4 mt-5 text-gray-500 text-[clamp(0.6rem,_5vw,_1rem)]">
           <li>
             <button onClick={() => scrollToSection(homeRef)}>Home</button>
           </li>
@@ -42,7 +42,7 @@ export default function App() {
           transition={{ duration: 1.0 }}
           className="max-w-4xl px-4"
         >
-          <h1 className="text-[clamp(1.8rem,_6vw,_3rem)] font-inter">
+          <h1 className="text-[clamp(2rem,_5vw,_2.8rem)] font-inter">
             Hello, I'm <span className="italic font-bodoni">Catherine Weeks</span>, a software engineer with a passion for responsive and clean <span className=" italic font-bodoni">front-end design</span>.
           </h1>
 
