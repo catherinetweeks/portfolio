@@ -1,7 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import HideOnScroll from "./components/HideOnScroll"
 
+//scroll to section navigation
 export default function App() {
   const homeRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -14,11 +16,15 @@ export default function App() {
     }
   };
 
+//dissapears when scrolling up, reappears scrolling down
+
+
   return (
     <div className="font-inter text-black bg-white cursor-default">
       {/* nav bar */}
-      <nav className="fixed top-0 left-0 w-full bg-white">
-        <ul className="flex justify-center gap-4 sm:gap-10 md:gap-14 py-4 mt-5 text-gray-500 text-[clamp(0.6rem,_5vw,_1rem)]">
+      <HideOnScroll>
+      <nav className="fixed top-5 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-sm px-8 py-4 hover:translate-y-2 transition-all">
+        <ul className="flex justify-center gap-4 sm:gap-10 md:gap-14 text-[clamp(0.6rem,_5vw,_1rem)]">
           <li>
             <button onClick={() => scrollToSection(homeRef)}>Home</button>
           </li>
@@ -33,6 +39,7 @@ export default function App() {
           </li>
         </ul>
       </nav>
+      </HideOnScroll>
 
       {/* home */}
       <section ref={homeRef} className="h-screen flex items-center justify-center p-5 pt-15">
@@ -53,7 +60,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="w-8 h-8"/>
+              <FaGithub className="w-8 h-8 hover:text-zinc-500 transition-all"/>
             </a>
 
             <a
@@ -61,7 +68,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="w-8 h-8"/>
+              <FaLinkedin className="w-8 h-8 hover:text-zinc-500 transition-all"/>
             </a>
           </div>
 
@@ -87,7 +94,7 @@ export default function App() {
 
       {/* contact */}
       <section ref={contactRef} className="h-screen flex items-center justify-center bg-gray-50">
-        <h2 className="text-3xl">Contact Section</h2>
+        <h2 className="">shoot me an email at catherinetweeks@gmail.com</h2>
       </section>
     </div>
   );
