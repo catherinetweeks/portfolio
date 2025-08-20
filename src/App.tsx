@@ -1,7 +1,9 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import HideOnScroll from "./components/HideOnScroll"
+import HideOnScroll from "./components/HideOnScroll";
+import { projects } from "./data/projects";
+import { ProjectCard } from "./components/ProjectCard";
 
 //scroll to section navigation
 export default function App() {
@@ -15,9 +17,6 @@ export default function App() {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-//dissapears when scrolling up, reappears scrolling down
-
 
   return (
     <div className="font-inter text-black bg-white cursor-default">
@@ -50,7 +49,7 @@ export default function App() {
           className="max-w-4xl px-4"
         >
           <h1 className="text-[clamp(2rem,_5vw,_2.8rem)] font-inter">
-            Hello, I'm <span className="italic font-bodoni">Catherine Weeks</span>, a software engineer with a passion for responsive and clean <span className=" italic font-bodoni">front-end design</span>.
+            Hello, I'm <span className="italic font-bodoni">Catherine Weeks</span>, a software engineer with a passion for responsive and clean front-end <span className="italic font-bodoni">design</span>.
           </h1>
 
           {/* clickable icons */}
@@ -75,7 +74,7 @@ export default function App() {
           {/* view my work */}
           <button
             onClick={() => scrollToSection(projectsRef)}
-            className="mt-14 px-6 py-3 bg-black text-[clamp(0.8rem,_3vw,_1.2rem)] text-white rounded-xl flex items-center gap-2 hover:-translate-y-1 cursor-pointer"
+            className="mt-14 px-6 py-3 bg-black text-[clamp(0.8rem,_3vw,_1.2rem)] text-white rounded-xl flex items-center gap-2 hover:translate-y-1 transition-all cursor-pointer"
           >
             View my work →
           </button>
@@ -83,8 +82,14 @@ export default function App() {
       </section>
 
       {/* projects */}
-      <section ref={projectsRef} className="h-screen flex items-center justify-center bg-gray-50">
-        <h2 className="text-3xl">Projects Section</h2>
+      <section ref={projectsRef} className="py-20 px-6">
+        <h2 className="flex text-[clamp(1.5rem,_3vw,_2rem)] font-inter mb-20 ml-30">Recent Projects</h2>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 justify-items-center m-10 sm:m-10 lg:m-20">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
       </section>
 
       {/* about */}
