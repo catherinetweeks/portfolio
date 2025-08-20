@@ -24,7 +24,7 @@ export function ProjectCard({
     >
 
       {/* image */}
-      <img src={image} alt={title} className="w-full h-40 object-cover" />
+      <img src={image} alt={title} className="w-full h-50 object-cover" />
 
       {/* content */}
       <div className="p-4">
@@ -43,16 +43,6 @@ export function ProjectCard({
             </span>
           ))}
         </div>
-
-        {/* link
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-4 text-blue-600 font-medium hover:underline"
-        >
-          View Project →
-        </a> */}
       </div>
     </a>
     </div>
