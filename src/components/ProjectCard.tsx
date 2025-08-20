@@ -16,7 +16,7 @@ export function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="bg-white overflow-hidden max-w-sm w-full transition hover:-translate-y-1">
+    <div className="bg-white overflow-hidden max-w-sm w-full transition">
     <a
       href={link}
       target="_blank"

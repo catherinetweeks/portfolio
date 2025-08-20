@@ -82,15 +82,17 @@ export default function App() {
       </section>
 
       {/* projects */}
-      <section ref={projectsRef} className="py-20 px-6">
-        <h2 className="flex text-[clamp(1.5rem,_3vw,_2rem)] font-inter mb-20 ml-30">Recent Projects</h2>
+      <motion.section
+        ref={projectsRef}
+        className="py-20 px-6">
+        <h2 className="flex text-[clamp(1.5rem,_3vw,_2rem)] font-inter">Recent Projects</h2>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 justify-items-center m-10 sm:m-10 lg:m-20">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <ProjectCard key={index} {...project}/>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* about */}
       <section ref={aboutRef} className="h-screen flex items-center justify-center">
