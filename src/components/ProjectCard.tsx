@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type ProjectCardProps = {
   image: string;
   type: string;
@@ -16,7 +18,7 @@ export function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="bg-white overflow-hidden max-w-sm w-full transition">
+    <div className="overflow-hidden max-w-sm w-full transition font-inter hover:shadow-sm hover:translate-y-1 rounded-xl">
     <a
       href={link}
       target="_blank"

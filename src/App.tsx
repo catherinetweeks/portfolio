@@ -1,4 +1,6 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaLocationArrow, FaGraduationCap, FaHeart } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { skills } from "./data/skills";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import HideOnScroll from "./components/HideOnScroll";
@@ -19,7 +21,7 @@ export default function App() {
   };
 
   return (
-    <div className="font-inter text-black bg-white cursor-default">
+    <div className="font-inter text-black bg-white cursor-default selection:bg-blue-800 selection:text-white">
       {/* nav bar */}
       <HideOnScroll>
       <nav className="fixed top-5 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-sm px-8 py-4 hover:translate-y-2 transition-all">
@@ -43,9 +45,9 @@ export default function App() {
       {/* home */}
       <section ref={homeRef} className="h-screen flex items-center justify-center p-5 pt-15">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0 }}
+          // initial={{ opacity: 0, y: 20 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 1.5 }}
           className="max-w-4xl px-4"
         >
           <h1 className="text-[clamp(2rem,_5vw,_2.8rem)] font-inter">
@@ -82,26 +84,109 @@ export default function App() {
       </section>
 
       {/* projects */}
-      <motion.section
+      <section
         ref={projectsRef}
         className="py-20 px-6">
-        <h2 className="flex text-[clamp(1.5rem,_3vw,_2rem)] font-inter">Recent Projects</h2>
-
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 justify-items-center m-10 sm:m-10 lg:m-20">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project}/>
-          ))}
-        </div>
-      </motion.section>
+        <h2 className="flex justify-center text-[clamp(1.5rem,_3vw,_1.8rem)] font-bodoni-italic mb-10">Recent Projects</h2>
+        <motion.div
+          initial={{ y: 40}}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center mr-10 ml-10 lg:mr-20 lg-ml-20">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project}/>
+            ))}
+          </div>
+        </motion.div>
+      </section>
 
       {/* about */}
-      <section ref={aboutRef} className="h-screen flex items-center justify-center">
-        <h2 className="text-3xl">About Section</h2>
+      <section ref={aboutRef} className="flex flex-col items-center py-20 px-6">
+        <h2 className="flex justify-center text-[clamp(1.5rem,_3vw,_1.8rem)] font-bodoni-italic mb-10">About Me</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl w-full">
+                {/* Left Column */}
+                <div className="space-y-6">
+                  <div className="flex items-start gap-3">
+                    <FaLocationArrow className="w-4 h-4 mt-1" />
+                    <div>
+                      <p className="font-semibold">Boston</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <FaGraduationCap className="w-4 h-4 mt-1" />
+                    <div>
+                      <p className="font-semibold">Smith College</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <FaHeart className="w-4 h-4 mt-1" />
+                    <div>
+                      <p className="font-semibold">
+                        Running, ceramics, art history, classic literature
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column */}
+                <div className="space-y-4">
+                  <p>
+                    I&apos;m a Computer Science student at Smith College located in the
+                    Boston area.
+                  </p>
+                  <p>
+                    I&apos;m currently looking for opportunities to grow as a front-end
+                    developer and work on products that help people feel more creative
+                    and organized. Check out my recent projects, and contact me here.
+                  </p>
+                </div>
+              </div>
+
+              {/* Skills Section */}
+              <div className="flex flex-wrap gap-2 mt-3">
+                {skills.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="text-md bg-gray-200 text-gray-700 px-2 py-1 rounded-full hover:translate-y-0.5"
+                  >
+                    {skill.tool}
+                  </div>
+                ))}
+              </div>
       </section>
 
       {/* contact */}
-      <section ref={contactRef} className="h-screen flex items-center justify-center bg-gray-50">
-        <h2 className="">shoot me an email at catherinetweeks@gmail.com</h2>
+      <section ref={contactRef} className="flex flex-col items-center justify-center py-20">
+        <h2 className="flex justify-center text-[clamp(1.5rem,_3vw,_1.8rem)] font-bodoni-italic mb-10">Contact Me!</h2>
+          <div className="space-y-6">
+            <div className="flex items-start gap-3">
+              <FaGithub className="w-4 h-4 mt-1" />
+              <div>
+                <a className="">Boston</a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <FaLinkedin className="w-4 h-4 mt-1" />
+              <div>
+                <p className="">Smith College</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <IoIosMail className="w-5 h-5 mt-1" />
+              <div>
+                <p className="">
+                  catherinetweeks@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <p className="text-gray-500">This site was handmade with React, Vite, Typescript, Tailwind, and Framer Motion, and love.</p>
       </section>
     </div>
   );

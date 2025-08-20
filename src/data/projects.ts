@@ -1,5 +1,3 @@
-//image dimensions:
-
 export const projects = [
     {
         image: "../src/assets/projectphotos/bujo.png",
@@ -22,7 +20,7 @@ export const projects = [
         type: "Pygame Pixel Game with Custom Artwork",
         title: "Lightning in a Bottle",
         description: "A cute, arcade-style 2D pixel game made in Python using Pygame that utilizes object oriented programming and event-driven architecture",
-        tags: ["Python", "Pygame"],
+        tags: ["Python", "Pygame", "Aseprite"],
         link: "https://github.com/catherinetweeks/lightning-in-a-bottle-pygame",
     },
 ]
