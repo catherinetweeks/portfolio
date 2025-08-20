@@ -24,7 +24,7 @@ export function ProjectCard({
     >
 
       {/* image */}
-      <img src={image} alt={title} className="w-full h-50 object-cover" />
+      <img src={image} alt={title} className="w-full h-50 object-cover rounded-2xl" />
 
       {/* content */}
       <div className="p-4">
