@@ -102,56 +102,56 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* about */}
-      <section ref={aboutRef} className="flex flex-col items-center py-20 px-6">
-        <h2 className="flex justify-center text-[clamp(1.5rem,_3vw,_1.8rem)] font-bodoni-italic mb-10">About Me</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl w-full">
-                {/* Left Column */}
-                <div className="space-y-6">
-                  <div className="flex items-start gap-3">
-                    <FaLocationArrow className="w-4 h-4 mt-1" />
-                    <div>
-                      <p className="font-semibold">Boston</p>
-                    </div>
-                  </div>
+{/* about */}
+      <section
+        ref={aboutRef}
+        className="flex flex-col items-center py-20 px-6"
+      >
+        <h2 className="flex justify-center text-[clamp(1.5rem,_3vw,_1.8rem)] font-bodoni-italic mb-10">
+          About Me
+        </h2>
 
-                  <div className="flex items-start gap-3">
-                    <FaGraduationCap className="w-4 h-4 mt-1" />
-                    <div>
-                      <p className="font-semibold">Smith College</p>
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl w-full">
+          {/* Left Column (1/3) */}
+          <div className="space-y-6 md:col-span-1">
+            <div className="flex items-start gap-3">
+              <FaLocationArrow className="w-4 h-4 mt-1" />
+              <p className="font-semibold">Boston</p>
+            </div>
 
-                  <div className="flex items-start gap-3">
-                    <FaHeart className="w-4 h-4 mt-1" />
-                    <div>
-                      <p className="font-semibold">
-                        Running, ceramics, art history, classic literature
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            <div className="flex items-start gap-3">
+              <FaGraduationCap className="w-4 h-4 mt-1" />
+              <p className="font-semibold">Smith College</p>
+            </div>
 
-                {/* Right Column */}
-                <div className="space-y-4">
-                  <p>
-                    I&apos;m a Computer Science student at Smith College located in the
-                    Boston area.
-                  </p>
-                  <p>
-                    I&apos;m currently looking for opportunities to grow as a front-end
-                    developer and work on products that help people feel more creative
-                    and organized. Check out my recent projects, and contact me here.
-                  </p>
-                </div>
-              </div>
+            <div className="flex items-start gap-3">
+              <FaHeart className="w-4 h-4 mt-1" />
+              <p className="font-semibold">
+                Running, ceramics, art history, classic literature
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column (2/3) */}
+          <div className="space-y-4 text-lg md:col-span-2">
+            <p>
+              I&apos;m a Computer Science student at Smith College located in the
+              Boston area.
+            </p>
+            <p>
+              I&apos;m currently looking for opportunities to grow as a front-end
+              developer and work on products that help people feel more creative and
+              organized. Check out my recent projects, and contact me here.
+            </p>
+          </div>
+        </div>
 
               {/* Skills Section */}
-              <div className="flex flex-wrap gap-2 mt-3">
+              <div className="flex flex-wrap justify-center gap-2 mt-10 max-w-md">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="text-md bg-gray-200 text-gray-700 px-2 py-1 rounded-full hover:translate-y-0.5"
+                    className="text-md bg-gray-200 text-gray-700 px-2 py-1 rounded-full hover:translate-y-0.5 transition-all"
                   >
                     {skill.tool}
                   </div>
@@ -166,14 +166,23 @@ export default function App() {
             <div className="flex items-start gap-3">
               <FaGithub className="w-4 h-4 mt-1" />
               <div>
-                <a className="">Boston</a>
+                <a href="https://github.com/catherinetweeks" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="">github.com/catherinetweeks</a>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
               <FaLinkedin className="w-4 h-4 mt-1" />
               <div>
-                <p className="">Smith College</p>
+                <a 
+                href="https://www.linkedin.com/in/catherinetweeks"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""> 
+                www.linkedin.com/in/catherinetweeks
+                </a>
               </div>
             </div>
 
@@ -186,7 +195,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <p className="text-gray-500">This site was handmade with React, Vite, Typescript, Tailwind, and Framer Motion, and love.</p>
+          <p className="text-gray-500 pt-15">This site was handmade with React, Vite, Typescript, Tailwind, and Framer Motion, and love.</p>
       </section>
     </div>
   );

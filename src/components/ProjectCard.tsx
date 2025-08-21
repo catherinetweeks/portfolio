@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 type ProjectCardProps = {
   image: string;
   type: string;
