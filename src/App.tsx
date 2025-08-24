@@ -84,7 +84,7 @@ export default function App() {
       <section
         ref={projectsRef}
         className="py-20 px-6">
-        <h2 className="flex justify-center text-[clamp(1.5rem,_3vw,_1.8rem)] font-bodoni-italic mb-10">Recent Projects</h2>
+        <h2 className="flex justify-center text-[clamp(1.5rem,_3.33vw,_2rem)] font-inter mb-20">Recent Projects</h2>
         <motion.div
           initial={{ y: 40}}
           whileInView={{ y: 0, opacity: 1 }}
@@ -104,11 +104,11 @@ export default function App() {
         ref={aboutRef}
         className="flex flex-col items-center py-20 px-6"
       >
-        <h2 className="flex justify-center text-[clamp(1.5rem,_3vw,_1.8rem)] font-bodoni-italic mb-10">
+        <h2 className="flex justify-center text-[clamp(1.5rem,_3.33vw,_2rem)] font-inter mb-20">
           About Me
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-2xl w-full">
           {/* Left Column (1/3) */}
           <div className="space-y-6 md:col-span-1">
             <div className="flex items-start gap-3">
@@ -130,21 +130,18 @@ export default function App() {
           </div>
 
           {/* Right Column (2/3) */}
-          <div className="space-y-4 text-lg md:col-span-2">
+          <div className="space-y-4 text-md md:col-span-2">
             <p>
-              I&apos;m a Computer Science student at Smith College located in the
-              Boston area.
+              Hi, I'm Catherine. I&apos;m a Computer Science student at Smith College, based near Boston, with a passion for crafting clean, intuitive front-end experiences. I love building tools that help people feel more creative, focused, and organized.
             </p>
             <p>
-              I&apos;m currently looking for opportunities to grow as a front-end
-              developer and work on products that help people feel more creative and
-              organized. Check out my recent projects, and contact me here.
+              I&apos;m currently looking for opportunities to grow as a front-end developer and contribute to products that make a real impact. Explore my recent projects above and please reach out, I'd love to connect.
             </p>
           </div>
         </div>
 
               {/* Skills Section */}
-              <div className="flex flex-wrap justify-center gap-2 mt-10 max-w-md">
+              <div className="flex flex-wrap justify-center gap-2 mt-15 max-w-md">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
@@ -158,7 +155,7 @@ export default function App() {
 
       {/* contact */}
       <section ref={contactRef} className="flex flex-col items-center justify-center py-20">
-        <h2 className="flex justify-center text-[clamp(1.5rem,_3vw,_1.8rem)] font-bodoni-italic mb-10">Contact Me!</h2>
+        <h2 className="flex justify-center text-[clamp(1.5rem,_3.33vw,_2rem)] font-inter mb-20">Contact Me</h2>
           <div className="space-y-6">
             <div className="flex items-start gap-3">
               <FaGithub className="w-4 h-4 mt-1" />
@@ -192,7 +189,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <p className="text-gray-500 pt-15">This site was handmade with React, Vite, Typescript, Tailwind, and Framer Motion, and love.</p>
+          <p className="text-gray-500 p-15">This site was handmade with React, Vite, Typescript, Tailwind, and Framer Motion, and love.</p>
       </section>
     </div>
   );
