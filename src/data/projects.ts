@@ -1,7 +1,10 @@
-const base = import.meta.env.BASE_URL;
+import bujoImg from "../assets/bujo.png";
+import markdownImg from "../assets/markdown.png";
+import lightningImg from "../assets/lightning.png";
+
 export const projects = [
     {
-        image: `${base}assets/projectphotos/bujo.png`,
+        image: bujoImg,
         type: "Minimalist Bullet Journal Web App",
         title: "Digital Bullet Journal",
         description: "A sleek bullet journaling app that allows users to save notes and to-dos, as well as sort these entries by completion status, due date, and creation date.",
@@ -9,7 +12,7 @@ export const projects = [
         link: "https://github.com/catherinetweeks/minimalist-bujo",
     },
     {
-        image: `${base}assets/projectphotos/markdown.png`,
+        image: markdownImg,
         type: "Custom Markdown Converter",
         title: "Rich Text to Markdown Editor",
         description: "A rich text editor made with React and Typescript that exports to markdown via copying the converted text to users' clipboard or downloading it as a .md file.",
@@ -17,7 +20,7 @@ export const projects = [
         link: "https://github.com/catherinetweeks/markdown-editor",
     },
     {
-        image: `${base}assets/projectphotos/lightning.png`,
+        image: lightningImg,
         type: "Pygame Pixel Game with Custom Artwork",
         title: "Lightning in a Bottle",
         description: "A cute, arcade-style 2D pixel game made in Python using Pygame that utilizes object oriented programming and event-driven architecture",

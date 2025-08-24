@@ -45,9 +45,6 @@ export default function App() {
       {/* home */}
       <section ref={homeRef} className="h-screen flex items-center justify-center p-5 pt-15">
         <motion.div
-          // initial={{ opacity: 0, y: 20 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 1.5 }}
           className="max-w-4xl px-4"
         >
           <h1 className="text-[clamp(2rem,_5vw,_2.8rem)] font-inter">
